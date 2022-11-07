@@ -16,10 +16,16 @@ model user {
   password  String    @db.VarChar(255)
 }
 
-model todo{
-  id        Int       @id @default(autoincrement())
-  userId    String
-  income    Int
-  expense   Int
-  descript  String  
+model tracker{
+  id           Int       @id @default(autoincrement())
+  userId       String
+  type         String
+  expense      Int
+  description  String  
+}
+
+model total_tracker{
+  id            Int     @id @default(autoincrement())
+  userId        String  @unique
+  total_expens  Int
 }
