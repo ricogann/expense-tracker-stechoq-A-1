@@ -1,9 +1,11 @@
 const userController = require('../controller/user.controller');
+const trackerController = require("../controller/tracker.controller");
 const authController = require('../controller/auth.controller');
 
 
 const _routes = [
     ['users', userController],
+    ["tracker", trackerController],
     ['login', authController],
 ]
 
